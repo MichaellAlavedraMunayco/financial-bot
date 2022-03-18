@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Controlador Financiero</title>
+	<link rel="stylesheet" href="./src/assets/fonts/font-face.css">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<h2>Gestor de Finanzas</h2>
+
+	<div class="container">
+		<h4>Saldo Actual</h4>
+
+		<h1 id="balance" class="balance">S/ 0.00</h1>
+
+		<div class="more-less-money">
+			<div>
+				<h4>Ingresos</h4>
+				<p id="more-money" class="money more">+ S/ 0.00</p>
+			</div>
+
+			<div>
+				<h4>Egresos</h4>
+				<p id="less-money" class="money less">- S/ 0.00</p>
+			</div>
+		</div>
+
+		<h3>Transacciones</h3>
+
+		<ul id="transactions" class="transactions"></ul>
+
+		<h3>Registrar transacción</h3>
+
+		<form id="form">
+			<div class="form-control">
+				<label for="text">Concepto</label>
+				<input autofocus type="text" id="text" placeholder="Escribir concepto ..." />
+			</div>
+
+			<div class="form-control">
+				<label for="amount">Valor<br />
+					<small>(+): ingresos, (-): egresos</small>
+				</label>
+				<input type="number" step="0.1" id="amount" placeholder="0.00" />
+			</div>
+
+			<button class="btn-add">Registrar</button>
+		</form>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
